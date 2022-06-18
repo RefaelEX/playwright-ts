@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <style>
+      h1 {
+        text-align: center;
+        width: 150px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="testPageHeading">
+      <h1>Test Page</h1>
+    </div>
+
+    <div id="testPageInputText">
+      <input type="text" name="itname" value="Input type Text" />
+    </div>
+
+    <div id="testPageTextArea">
+      <textarea>
+     Text Area
+    </textarea
+      >
+    </div>
+
+    <div id="testPageSelect">
+      <select>
+        <option value="firstOption">firstOption</option>
+        <option value="secondOption">secondOption</option>
+      </select>
+    </div>
+
+    <div id="testPageClick">
+      <button
+        onclick="document.getElementById('someText').innerHTML='I was clicked'"
+      >
+        Click me
+      </button>
+      <div id="someText">I was not clicked</div>
+    </div>
+
+    <button id="alert-button" onclick="alertFunction()">Trigger Alert</button>
+
+    <button id="confirm-alert-button" onclick="confirmAlertFunction()">
+      Trigger Confirm Alert
+    </button>
+
+    <button id="another-alert-button" onclick="anotherAlertFunction()">
+      Trigger Another Alert
+    </button>
+    <br />
+    
+    <div id="delay-button-div">
+      <button id="delay-button"
+        onclick="document.getElementById('delayButtonText').innerHTML='I was clicked after delay'" disabled="true"
+      >
+        Delay Button
+      </button>
+      <div id="delayButtonText">I was not clicked</div>
+    </div>
+
+
+    <iframe
+      id="iframe01"
+      src="test\testPage\iframe01.html"
+      height="200"
+      width="300"
+      title="Iframe Example"
+    ></iframe>
+
+    <script>
+       $( document ).ready(function() {
+          console.log('Page is Ready');
+          setTimeout(function(){document.getElementById("delay-button").disabled = false;},3000);
+        });
+      
+      function alertFunction() {
+        alert('Hello Alert');
+      }
+
+      function confirmAlertFunction() {
+        confirm('Hello Confirm Alert');
+      }
+
+      function anotherAlertFunction() {
+        alert('Hello Another Alert');
+      }
+    </script>
+  </body>
+</html>

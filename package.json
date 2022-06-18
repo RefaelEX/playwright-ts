@@ -1,0 +1,28 @@
+{
+  "name": "pw-e2e-infra",
+  "version": "1.0.0",
+  "description": "E2E pom objects",
+  "license": "MIT",
+  "scripts": {
+    "tsc:compile": "tsc",
+    "tsc:watch": "tsc -w",
+    "test:run": "npx playwright test",
+    "testPage:start": "ws --spa test/testPage/index.html",
+    "prettier:fix": "prettier --config .prettierrc **/*.ts --write",
+    "prettier:check": "prettier --config .prettierrc **/*.ts --check",
+    "report": "npx playwright show-report",
+    "pretest": "tsc --incremental -p ./tsconfig.json"
+  },
+    "devDependencies": {
+      "@playwright/test": "^1.21.0",
+      "@typescript-eslint/eslint-plugin": "^5.19.0",
+      "@typescript-eslint/parser": "^5.19.0",
+      "eslint": "^8.13.0",
+      "eslint-config-prettier": "^8.5.0",
+      "eslint-plugin-playwright": "^0.8.0",
+      "eslint-plugin-prettier": "^4.0.0",
+      "local-web-server": "^5.2.0",
+      "prettier": "2.6.2",
+      "typescript": "^4.6.3"
+  }
+}
