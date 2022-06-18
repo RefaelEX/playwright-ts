@@ -20,7 +20,7 @@ myDescribe('button spec', () => {
       expectedClickedText
     );
   });
-  test('should be disabled of page load', async () => {
+  test('should be disabled on page load', async () => {
     expect(await testPage.delayButton.isDisabled()).toBeTruthy();
     /**
      * Using Assertions library
