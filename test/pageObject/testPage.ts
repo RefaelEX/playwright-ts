@@ -39,6 +39,10 @@ class TestPage extends BasePage {
   goTo(): Promise<Response> {
     return PwService.Instance.BrowserUtils.goTo(URL);
   }
+
+  getUrl(): string {
+    return URL;
+  }
 }
 
 export const testPage = new TestPage();

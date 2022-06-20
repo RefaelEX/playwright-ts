@@ -16,7 +16,7 @@ myDescribe('text area spec', () => {
   });
   test('should fill textArea', async () => {
     const expectedNewValue = 'New Text In Text Area';
-    await testPage.textArea.setText(expectedNewValue);
+    await testPage.textArea.fill(expectedNewValue);
     const currValue = await testPage.textArea.getValue();
     expect(currValue).toEqual(expectedNewValue);
   });

@@ -11,7 +11,8 @@
     "prettier:fix": "prettier --config .prettierrc **/*.ts --write",
     "prettier:check": "prettier --config .prettierrc **/*.ts --check",
     "report": "npx playwright show-report",
-    "pretest": "tsc --incremental -p ./tsconfig.json"
+    "pretest": "tsc --incremental -p ./tsconfig.json",
+    "test": "npx playwright test test/saucedemo/ --headed" 
   },
     "devDependencies": {
       "@playwright/test": "^1.21.0",

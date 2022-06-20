@@ -10,7 +10,7 @@ export class ContainsInput extends BaseProperty {
     return PwService.Instance.HtmlUtils.clear(this.selector);
   }
 
-  public setText(text: string): Promise<void> {
+  public fill(text: string): Promise<void> {
     return PwService.Instance.HtmlUtils.fill(this.selector, text);
   }
 

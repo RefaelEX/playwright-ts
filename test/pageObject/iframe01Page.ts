@@ -12,6 +12,10 @@ class Iframe01Page extends BasePage {
   goTo(): Promise<Response> {
     throw new Error('Method not implemented.');
   }
+
+  getUrl(): string {
+    throw new Error('Method not implemented.');
+  }
 }
 
 export const iframe01Page = new Iframe01Page();

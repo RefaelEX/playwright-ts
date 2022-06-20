@@ -4,13 +4,21 @@ import { testPage } from './pageObject/testPage';
 
 type TestFunction = () => void;
 
-export function myDescribe(name: string, testBody: TestFunction): void {
+export function myDescribe(
+  name: string,
+  testBody: TestFunction,
+  navigateTo?: string
+): void {
   test.describe(name, async () => {
     test.beforeEach(async ({ page }) => {
       console.log('before each in myDescribe');
 
       PwService.init(page);
-      await testPage.goTo();
+      if (navigateTo) {
+        await PwService.Instance.BrowserUtils.goTo(navigateTo);
+      } else {
+        await testPage.goTo();
+      }
     });
 
     testBody();
@@ -19,7 +27,7 @@ export function myDescribe(name: string, testBody: TestFunction): void {
       console.log('After test in myDescribe');
       if (testInfo.status === 'failed') {
         const screenshot = await page.screenshot();
-        await testInfo.attach('screenshot', {
+        await testInfo.attach('', {
           contentType: 'image/png',
           body: screenshot
         });
