@@ -1,6 +1,7 @@
 import { test } from '@playwright/test';
 import PwService from '../src/framework/pwService';
 import { testPage } from './pageObject/testPage';
+import { inspect } from 'util';
 
 type TestFunction = () => void;
 
@@ -40,14 +41,14 @@ export function myDescribe(
 
       await testInfo.attach('browsers response network logs', {
         contentType: 'application/json',
-        body: JSON.stringify(
+        body: inspect(
           PwService.Instance.BrowserUtils.NetworkLogsService.getResponseLogs()
         )
       });
 
       await testInfo.attach('browsers Request network logs', {
         contentType: 'application/json',
-        body: JSON.stringify(
+        body: inspect(
           PwService.Instance.BrowserUtils.NetworkLogsService.getRequestLogs()
         )
       });

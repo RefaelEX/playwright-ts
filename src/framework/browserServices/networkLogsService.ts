@@ -18,10 +18,11 @@ export default class NetworkLogsService {
   }
 
   public startRecordLogs(): void {
-    this.page.on('request', (request) => {
+    this.page.on('request', async (request) => {
       this.reqLogs.push({
         url: request.url(),
         method: request.method(),
+        headers: await request.allHeaders(),
         failure: request.failure() ? request.failure() : ''
       });
     });
@@ -30,7 +31,8 @@ export default class NetworkLogsService {
       this.resLogs.push({
         url: response.url(),
         status: response.status(),
-        statusText: response.statusText()
+        statusText: response.statusText(),
+        headers: await response.allHeaders()
       });
     });
   }
