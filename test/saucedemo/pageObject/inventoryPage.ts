@@ -1,7 +1,7 @@
 import { BasePage } from '../../../src/framework/basePage';
 import PwService from '../../../src/framework/pwService';
 import { Response } from '@playwright/test';
-import { createBaseElement } from '../../../src/elements/baseElement';
+import { createBaseElement } from '../../../src/elements/htmlElements/baseElement';
 
 const URL = 'https://www.saucedemo.com/inventory.html';
 

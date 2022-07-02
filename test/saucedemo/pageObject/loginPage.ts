@@ -1,8 +1,8 @@
 import { BasePage } from '../../../src/framework/basePage';
 import PwService from '../../../src/framework/pwService';
 import { Response } from '@playwright/test';
-import { createInputElement } from '../../../src/elements/inputElement';
-import { createButtonElement } from '../../../src/elements/buttonElement';
+import { createInputElement } from '../../../src/elements/htmlElements/inputElement';
+import { createButtonElement } from '../../../src/elements/htmlElements/buttonElement';
 
 const URL = 'https://www.saucedemo.com/';
 
