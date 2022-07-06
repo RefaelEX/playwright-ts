@@ -11,7 +11,7 @@ import type { PlaywrightTestConfig } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 const config: PlaywrightTestConfig = {
-  testDir: './test',
+  testDir: './test/ui',
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
   expect: {

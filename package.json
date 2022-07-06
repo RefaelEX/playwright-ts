@@ -6,14 +6,14 @@
   "scripts": {
     "tsc:compile": "tsc",
     "tsc:watch": "tsc -w",
-    "test:run": "npx playwright test",
-    "testPage:start": "ws --spa test/testPage/index.html",
+    "test:run": "npx playwright test --config=playwright.config.ts",
+    "testPage:start": "ws --spa test/ui/testPage/index.html",
     "prettier:fix": "prettier --config .prettierrc **/*.ts --write",
     "prettier:check": "prettier --config .prettierrc **/*.ts --check",
     "report": "npx playwright show-report",
     "pretest": "tsc --incremental -p ./tsconfig.json",
     "test": "npx playwright test test/saucedemo/ --headed" ,
-    "test:api": "npx playwright test --config=apiTesting/playwright.config.ts.ts"
+    "test:api": "npx playwright test --config=test/api/playwright.config.ts"
   },
     "devDependencies": {
       "@playwright/test": "^1.21.0",

@@ -1,11 +1,11 @@
 import { Response } from '@playwright/test';
-import { createBaseElement } from '../../src/elements/htmlElements/baseElement';
-import { createButtonElement } from '../../src/elements/htmlElements/buttonElement';
-import { createInputElement } from '../../src/elements/htmlElements/inputElement';
-import { createSelectElement } from '../../src/elements/htmlElements/selectElement';
-import { createTextareaElement } from '../../src/elements/htmlElements/textareaElement';
-import { BasePage } from '../../src/framework/basePage';
-import PwService from '../../src/framework/pwService';
+import { createBaseElement } from '../../../src/elements/htmlElements/baseElement';
+import { createButtonElement } from '../../../src/elements/htmlElements/buttonElement';
+import { createInputElement } from '../../../src/elements/htmlElements/inputElement';
+import { createSelectElement } from '../../../src/elements/htmlElements/selectElement';
+import { createTextareaElement } from '../../../src/elements/htmlElements/textareaElement';
+import { BasePage } from '../../../src/framework/basePage';
+import PwService from '../../../src/framework/pwService';
 
 const URL = 'http://127.0.0.1:8000/';
 

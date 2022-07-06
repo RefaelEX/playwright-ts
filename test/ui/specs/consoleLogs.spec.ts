@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import PwService from '../../src/framework/pwService';
+import PwService from '../../../src/framework/pwService';
 import { myDescribe } from '../testHelper';
 
 myDescribe('console logs spec', () => {

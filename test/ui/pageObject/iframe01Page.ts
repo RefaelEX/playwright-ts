@@ -1,6 +1,6 @@
 import { Response } from '@playwright/test';
-import { createBaseElement } from '../../src/elements/htmlElements/baseElement';
-import { BasePage } from '../../src/framework/basePage';
+import { createBaseElement } from '../../../src/elements/htmlElements/baseElement';
+import { BasePage } from '../../../src/framework/basePage';
 
 export const selectors = {
   hElement: '#h1-id'

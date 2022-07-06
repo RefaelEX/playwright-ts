@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import PwService from '../../src/framework/pwService';
+import PwService from '../../../src/framework/pwService';
 import { iframe01Page } from '../pageObject/iframe01Page';
 import { myDescribe } from '../testHelper';
 

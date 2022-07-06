@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
-import PwService from '../src/framework/pwService';
 import { testPage } from './pageObject/testPage';
 import { inspect } from 'util';
+import PwService from '../../src/framework/pwService';
 
 type TestFunction = () => void;
 
