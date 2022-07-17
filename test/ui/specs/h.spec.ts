@@ -10,8 +10,6 @@ myDescribe('h spec', () => {
 
   test('validate h css property', async () => {
     const expectedCssValue = 'center';
-    expect(await testPage.hElement.getCssProperty('text-align')).toEqual(
-      expectedCssValue
-    );
+    expect(await testPage.hElement.getCssProperty('text-align')).toEqual(expectedCssValue);
   });
 });

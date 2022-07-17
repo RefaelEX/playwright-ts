@@ -10,12 +10,7 @@ function htmlElementBuilder(constructors: any[]): any {
 
   constructors.forEach((baseCtor) => {
     Object.getOwnPropertyNames(baseCtor.prototype).forEach((name) => {
-      Object.defineProperty(
-        tmpElement.prototype,
-        name,
-        Object.getOwnPropertyDescriptor(baseCtor.prototype, name) ||
-          Object.create(null)
-      );
+      Object.defineProperty(tmpElement.prototype, name, Object.getOwnPropertyDescriptor(baseCtor.prototype, name) || Object.create(null));
     });
   });
 

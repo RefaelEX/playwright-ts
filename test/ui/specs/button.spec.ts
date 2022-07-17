@@ -6,9 +6,7 @@ myDescribe('button spec', () => {
   test('click button', async () => {
     const expectedClickedText = 'I was clicked';
     await testPage.button1.click();
-    expect(await testPage.divClickText.innerText()).toEqual(
-      expectedClickedText
-    );
+    expect(await testPage.divClickText.innerText()).toEqual(expectedClickedText);
   });
   test('should validate button text', async () => {
     expect(await testPage.button1.innerText()).toEqual('Click me');
@@ -16,9 +14,7 @@ myDescribe('button spec', () => {
   test('should click button after 3 second delay', async () => {
     const expectedClickedText = 'I was clicked after delay';
     await testPage.delayButton.click();
-    expect(await testPage.delayButtonTextDiv.innerText()).toEqual(
-      expectedClickedText
-    );
+    expect(await testPage.delayButtonTextDiv.innerText()).toEqual(expectedClickedText);
   });
   test('should be disabled on page load', async () => {
     expect(await testPage.delayButton.isDisabled()).toBeTruthy();

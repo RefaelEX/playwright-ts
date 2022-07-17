@@ -12,10 +12,7 @@ export class CommonsProperties extends BaseProperty {
   }
 
   public getCssProperty(cssProperty: string): Promise<string> {
-    return PwService.Instance.HtmlUtils.getCssProperty(
-      this.selector,
-      cssProperty
-    );
+    return PwService.Instance.HtmlUtils.getCssProperty(this.selector, cssProperty);
   }
 
   public getLocator(): Locator {

@@ -5,11 +5,7 @@ import PwService from '../../src/framework/pwService';
 
 type TestFunction = () => void;
 
-export function myDescribe(
-  name: string,
-  testBody: TestFunction,
-  navigateTo?: string
-): void {
+export function myDescribe(name: string, testBody: TestFunction, navigateTo?: string): void {
   test.describe(name, async () => {
     test.beforeEach(async ({ page }) => {
       console.log('before each in myDescribe');
@@ -41,16 +37,12 @@ export function myDescribe(
 
       await testInfo.attach('browsers response network logs', {
         contentType: 'application/json',
-        body: inspect(
-          PwService.Instance.BrowserUtils.NetworkLogsService.getResponseLogs()
-        )
+        body: inspect(PwService.Instance.BrowserUtils.NetworkLogsService.getResponseLogs())
       });
 
       await testInfo.attach('browsers Request network logs', {
         contentType: 'application/json',
-        body: inspect(
-          PwService.Instance.BrowserUtils.NetworkLogsService.getRequestLogs()
-        )
+        body: inspect(PwService.Instance.BrowserUtils.NetworkLogsService.getRequestLogs())
       });
     });
 

@@ -46,10 +46,7 @@ const config: PlaywrightTestConfig = {
         isEnabled: (name, severity) => {
           return severity === 'warning';
         },
-        log: (name, severity, message, args) =>
-          console.log(
-            `[${severity}]: [${name}] [${message}] ${args ? args : ''}`
-          )
+        log: (name, severity, message, args) => console.log(`[${severity}]: [${name}] [${message}] ${args ? args : ''}`)
       }
     }
   },

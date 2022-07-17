@@ -4,8 +4,6 @@
   "description": "E2E pom objects",
   "license": "MIT",
   "scripts": {
-    "tsc:compile": "tsc",
-    "tsc:watch": "tsc -w",
     "test:run": "npx playwright test --config=playwright.config.ts",
     "testPage:start": "ws --spa test/ui/testPage/index.html",
     "prettier:fix": "prettier --config .prettierrc **/*.ts --write",

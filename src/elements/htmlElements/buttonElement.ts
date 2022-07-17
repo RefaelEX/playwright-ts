@@ -4,11 +4,7 @@ import { CommonsProperties } from '../properties/commonsProperties';
 import { ContainsText } from '../properties/containsText';
 import { Disablement } from '../properties/disablement';
 
-interface Button
-  extends CommonsProperties,
-    Clickable,
-    ContainsText,
-    Disablement {}
+interface Button extends CommonsProperties, Clickable, ContainsText, Disablement {}
 
 const properties = [Clickable, ContainsText, Disablement, CommonsProperties];
 

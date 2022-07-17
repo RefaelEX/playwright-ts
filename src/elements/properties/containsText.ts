@@ -11,8 +11,6 @@ export class ContainsText extends BaseProperty {
   }
 
   public waitForText(expectedText: string): void {
-    console.log(
-      `Waiting for from ${expectedText} text to be present in ${this.selector}`
-    );
+    console.log(`Waiting for from ${expectedText} text to be present in ${this.selector}`);
   }
 }

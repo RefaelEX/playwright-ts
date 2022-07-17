@@ -6,10 +6,6 @@ myDescribe('console logs spec', () => {
   test('should read console logs', async () => {
     const expectedLog = 'Page is Ready';
 
-    expect(
-      PwService.Instance.BrowserUtils.ConsoleLogsService.getLogs().includes(
-        expectedLog
-      )
-    ).toBe(true);
+    expect(PwService.Instance.BrowserUtils.ConsoleLogsService.getLogs().includes(expectedLog)).toBe(true);
   });
 });

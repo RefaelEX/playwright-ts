@@ -43,10 +43,7 @@ export default class HtmlUtils {
     return this.getLocator(selector).innerText();
   }
 
-  public selectOption(
-    selector: string,
-    options: string[]
-  ): Promise<Array<string>> {
+  public selectOption(selector: string, options: string[]): Promise<Array<string>> {
     return this.getLocator(selector).selectOption(options);
   }
 
@@ -58,10 +55,7 @@ export default class HtmlUtils {
     return this.getLocator(selector).getAttribute(name);
   }
 
-  public getCssProperty(
-    selector: string,
-    cssProperty: string
-  ): Promise<string> {
+  public getCssProperty(selector: string, cssProperty: string): Promise<string> {
     return this.getLocator(selector).evaluate((elem, cssProperty) => {
       return window.getComputedStyle(elem).getPropertyValue(cssProperty);
     }, cssProperty);
